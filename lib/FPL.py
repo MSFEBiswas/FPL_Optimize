@@ -21,7 +21,7 @@ nest_asyncio.apply()
 async def all_players():
     async with aiohttp.ClientSession() as session:
         understat = Understat(session)
-        data = await understat.get_league_players("epl", 2019)
+        data = await understat.get_league_players("epl", 2020)
         json_ = json.loads((json.dumps(data)))
         return json_
 
